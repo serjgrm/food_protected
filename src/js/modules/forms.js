@@ -22,7 +22,7 @@ function forms(formsSelector, modalTimerId) {
             form.insertAdjacentElement('afterend', statusMessage);
             const formData = new FormData(form);
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
-            postData('http://localhost:3000/requests', json)
+            postData('https://jsonplaceholder.typicode.com/posts', json)
             .then(data => {
                 showThanksModal(message.success);
                 statusMessage.remove();
