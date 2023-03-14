@@ -24,7 +24,6 @@ function forms(formsSelector, modalTimerId) {
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
             postData('http://localhost:3000/requests', json)
             .then(data => {
-                console.log(data);
                 showThanksModal(message.success);
                 statusMessage.remove();
             }).catch(() => {
@@ -34,9 +33,13 @@ function forms(formsSelector, modalTimerId) {
             });
         });
     }
+
     function showThanksModal(message) {
+
         const prevModalDialog = document.querySelector('.modal__dialog');
+        prevModalDialog.classList.remove('show');
         prevModalDialog.classList.add('hide');
+
         openModal('.modal', modalTimerId);
         const thanksModal = document.createElement('div');
         thanksModal.classList.add('modal__dialog');
@@ -55,4 +58,5 @@ function forms(formsSelector, modalTimerId) {
         }, 4000);
     }
 }
+
 export default forms;
