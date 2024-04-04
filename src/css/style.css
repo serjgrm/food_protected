@@ -776,3 +776,11 @@ html {
     margin-left: 15%;
     list-style: none
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
