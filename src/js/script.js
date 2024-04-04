@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 5000000);
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId);
-    timer('.timer', '2023-06-11');
+    timer('.timer', '2024-06-11');
     calc();
     forms('form', modalTimerId);
     slider({
